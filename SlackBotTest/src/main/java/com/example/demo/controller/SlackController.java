@@ -14,7 +14,7 @@ public class SlackController {
 	public String getResponse(@RequestParam("text") String text)
 	{
 		if(text.startsWith("AO2"))
-		return "Hello.,You have entered AOReference number and it is ->"+text;
+		return "Hello., You have entered AOReference number and it is ->"+text;
 		
 		else if(text.startsWith("789"))
 			return "Hello., You have entered SAP number and it is ->"+text;
