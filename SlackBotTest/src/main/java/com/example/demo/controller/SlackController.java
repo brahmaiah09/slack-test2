@@ -13,6 +13,12 @@ public class SlackController {
 			consumes = MediaType.APPLICATION_FORM_URLENCODED_VALUE)
 	public String getResponse(@RequestParam("text") String text)
 	{
-		return "Hello Mr. BP., your text is ->"+text;
+		if(text.startsWith("AO2"))
+		return "Hello., You have entered AOReference number and it is ->"+text;
+		
+		else if(text.startsWith("789"))
+			return "Hello., You have entered SAP number and it is ->"+text;
+		else
+			return "Hello., You have entered invalid number and it is ->"+text;
 	}
 }
